@@ -1,0 +1,13 @@
+{
+  "name": "waterfall-dev",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6"
+  },
+  "scripts": {
+    "dev": "npx babel src --out-dir lib"
+  }
+}
