@@ -112,3 +112,4 @@ src/css/*.css.map
 lib/*
 */.DS_Store
 .DS_Store
+src/.DS_Store
