@@ -8,8 +8,8 @@ class Waterfall {
   };
   constructor(options) {
     const { grid, items, columnWidth, gap } = options;
-    this.columnWidth = columnWidth | 200;
-    this.gap = gap | 20;
+    this.columnWidth = columnWidth || 200;
+    this.gap = gap || 20;
     this.waterfallGrid = document.querySelectorAll(grid)[0];
     this.waterfallItems = document.querySelectorAll(items);
     document.documentElement.style.setProperty('--grid-width', `${this.columnWidth}px`);
