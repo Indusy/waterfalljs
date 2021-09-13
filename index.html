@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="./src/css/style.css">
     <style>
         .__waterfall-item:nth-child(2n) {
-            background-color: rgb(150, 82, 118);
+            background-color: rgb(253, 146, 203);
         }
 
         .__waterfall-item:nth-child(2n-1) {
-            background-color: rgb(164, 194, 134);
+            background-color: rgb(134, 177, 255);
         }
     </style>
     <title>瀑布流.js</title>
@@ -48,5 +48,13 @@
         <div class="__waterfall-item" style="height: 330px;"></div>
     </div>
     <script src="./lib/index.js"></script>
+    <script>
+        let waterfall = new Waterfall({
+            columnWidth: 200,
+            gap: 20,
+            grid: '.__waterfall-grid',
+            items: '.__waterfall-item'
+        })
+    </script>
 </body>
 </html>
