@@ -1,5 +1,6 @@
 :root {
     --grid-width: 200px;
+    --items-gap: 20px;
 }
 .__waterfall-grid {
     width: 100%;
@@ -8,14 +9,14 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    row-gap: 20px;
-    column-gap: 20px;
+    row-gap: var(--items-gap);
+    column-gap: var(--items-gap);
     position: relative;
     margin: 0 auto;
 }
 
 .__waterfall-item {
     box-sizing: border-box;
-    width: 200px;
+    width: var(--grid-width);
     transition: all .5s;
 }

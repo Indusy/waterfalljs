@@ -12,6 +12,8 @@ class Waterfall {
     this.gap = gap | 20;
     this.waterfallGrid = document.querySelectorAll(grid)[0];
     this.waterfallItems = document.querySelectorAll(items);
+    document.documentElement.style.setProperty('--grid-width', `${this.columnWidth}px`);
+    document.documentElement.style.setProperty('--item-gap', `${this.gap}px`);
     (() => {
       this.putItems();
     })();
@@ -71,9 +73,9 @@ class Waterfall {
       }
       // 计算位置
       top = colHeights[willAppendNewItemCol];
-      left = leftStartPosition + willAppendNewItemCol * (200 + 20);
+      left = leftStartPosition + willAppendNewItemCol * (this.columnWidth + this.gap);
       // 更新当前列高度
-      colHeights[willAppendNewItemCol] += ele.clientHeight + 20;
+      colHeights[willAppendNewItemCol] += ele.clientHeight + this.gap;
       this.setItemPosition(ele, left, top);
     });
   }
